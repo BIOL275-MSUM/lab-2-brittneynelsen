@@ -1,11 +1,10 @@
 ---
 title: "Lab 2: Introduction to RStudio"
-author: "___"
+author: "brittneynelsen"
 date: "`r format(Sys.Date())`"
 output: github_document
 ---
 
-> INSTRUCTIONS: REMOVE THIS LINE AND REPLACE ____ WITH YOUR OWN TEXT
 
 Welcome to my Lab 2 repository for Quantitative Biology BIOL 275 at MSUM.
 
@@ -13,8 +12,9 @@ Welcome to my Lab 2 repository for Quantitative Biology BIOL 275 at MSUM.
 
 The objectives of this lab are:
 
-- ___
-- ___
+- learn how to use the console window to run commands as you perform basic arithmetic operations
+- learn the basics of using function
+- learn about creating objects using the assignment operator
 
 ## Repository contents
 

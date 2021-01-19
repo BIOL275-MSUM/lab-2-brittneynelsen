@@ -23,3 +23,4 @@ sem
 mean(k) + 1.96 * sem                             # upper limit
 mean(k) - 1.96 * sem                             # lower limit
 c(mean(k) + 1.96 * sem, mean(k) - 1.96 * sem)    # both limits combined
+

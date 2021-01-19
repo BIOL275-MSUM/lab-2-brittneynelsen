@@ -1,10 +1,9 @@
 ---
 title: "Lab 2 Assignment"
-author: "___"
+author: "brittneynelsen"
 date: "`r format(Sys.Date())`"
 output: github_document
 ---
-
 ## Instructions
 
 Replace any triple underscores "___" with the appropriate text.
@@ -17,28 +16,36 @@ The final section of the Lab 2 instructions asks me to imagine I have collected 
 
     `6.05 4.89 3.32 4.93 5.25 5.04 4.91 2.84 5.60 5.34`
 
-First, I combine the values into a vector using the `c()` function, assign it to a variable named `x`, and print `x`
+First, I combine the values into a vector using the `c()` function, assign it to a variable named `k`, and print `k`
 
 ```{r vector}
-
+c(k <- c(6.05, 4.89, 3.32, 4.93, 5.25, 5.04, 4.91, 2.84, 5.60, 5.34))
 ```
 
 Here I calculate the sample size, mean, median, and standard deviation:
 
 ```{r stats}
-
+length(k)  # sample size
+median(k)  # median value
+mean(k)    # mean value
+sd(k)      # standard deviation
+n <- length(k) # sample size
+n
 ```
 
 The standard error of the mean can be calculated by dividing the standard deviation by the square root of the sample size:
 
 ```{r se}
-
+sem <- sd(k) / sqrt(n) # standard error of the mean
+sem
 ```
 
-And finally, I can see the 95% confidence interval ranges from a minimum of ___ to a maximum of ___
+And finally, I can see the 95% confidence interval ranges from a minimum of 4.203409 to a maximum of 5.430591
 
 ```{r mean}
-
+mean(k) + 1.96 * sem                             # upper limit
+mean(k) - 1.96 * sem                             # lower limit
+c(mean(k) + 1.96 * sem, mean(k) - 1.96 * sem)    # both limits combined
 ```
 
 In this assignment I focused on using a single set of numbers, aka a "vector".
@@ -54,14 +61,14 @@ We could visualize the data as follows.
 library(tidyverse)
 
 # check to make sure you did the part above correctly
-# if not, generate some fake x data
-if (!exists("x") | !is.numeric(x) | !length(x) == 10) x <- rep(1, 10)
+# if not, generate some fake k data
+if (!exists("k") | !is.numeric(k) | !length(k) == 10) k <- rep(1, 10)
 
 # put the chick data into a data frame
 chick_data <-
   tibble::tibble(
     diet = rep(c("Combined", "Combined", "Organic", "Non-Organic"), each = 5),
-    weight = c(x, x)
+    weight = c(k, k)
   )
 
 # summarize the chick weights by diet
@@ -89,7 +96,7 @@ ggplot(chick_data, aes(x = diet, y = weight, color = diet, fill = diet)) +
   ) +
   labs(
     title = "Weights of chicks fed organic and non-organic grain",
-    x = "Diet",
+    k = "Diet",
     color = "Diet",
     fill = "Diet",
     y = "Weight (g)"
