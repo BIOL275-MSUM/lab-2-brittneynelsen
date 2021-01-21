@@ -21,7 +21,7 @@ The objectives of this lab are:
 The repository contains the following scripts:
 
 - [calculator.R](calculator.R)
-- [calculator.Rmd](calculator.Rmd)
+- [Lab 2 Report](assignment.md)
 
 ## Instructions for knitting
 
@@ -37,11 +37,3 @@ Here is a list of resources for helping you write R Markdown documents:
 
 - In the Go to the **Help** menu and select **Markdown Quick Reference**
 - [Basic Syntax](https://www.markdownguide.org/basic-syntax/) on the Markdown Guide website
-
-## Session Info
-
-Here is my session information:
-
-```{r}
-sessioninfo::session_info(c("tidyverse"))
-```
